@@ -117,11 +117,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-<<<<<<< HEAD
-})({"src/main.js":[function(require,module,exports) {
-console.log('Hello World');
-},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-=======
 })({"assets/yeah.mp3":[function(require,module,exports) {
 module.exports = "/yeah.5c346cd8.mp3";
 },{}],"src/main.js":[function(require,module,exports) {
@@ -148,7 +143,6 @@ window.addEventListener('load', function () {
   });
 });
 },{"../assets/yeah.mp3":"assets/yeah.mp3"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
->>>>>>> develop
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -176,7 +170,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44603" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34567" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
