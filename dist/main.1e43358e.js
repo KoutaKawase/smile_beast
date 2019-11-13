@@ -117,49 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/canvas.js":[function(require,module,exports) {
-"use strict";
+})({"src/main.js":[function(require,module,exports) {
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.drawImageOnCanvas = void 0;
-
-var drawImageOnCanvas = function drawImageOnCanvas(imageSrc) {
-  var canvas = document.getElementById('canvas');
-  var context = canvas.getContext('2d');
-  var image = new Image();
-  image.src = imageSrc;
-  image.addEventListener('load', function () {
-    context.drawImage(image, 0, 0);
-  }, false);
-};
-
-exports.drawImageOnCanvas = drawImageOnCanvas;
-},{}],"assets/yaju_smile.jpeg":[function(require,module,exports) {
-module.exports = "/yaju_smile.f7dad5ae.jpeg";
-},{}],"assets/yaju_annyoi.png":[function(require,module,exports) {
-module.exports = "/yaju_annyoi.007526bf.png";
-},{}],"src/main.js":[function(require,module,exports) {
-"use strict";
-
-var _canvas = require("./canvas");
-
-var _yaju_smile = _interopRequireDefault(require("../assets/yaju_smile.jpeg"));
-
-var _yaju_annyoi = _interopRequireDefault(require("../assets/yaju_annyoi.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var slider = document.getElementById('slider');
-window.addEventListener('load', function () {
-  (0, _canvas.drawImageOnCanvas)(_yaju_smile.default);
-  (0, _canvas.drawImageOnCanvas)(_yaju_annyoi.default);
-});
-slider.addEventListener('input', function (e) {
-  console.log(e.currentTarget.value);
-});
-},{"./canvas":"src/canvas.js","../assets/yaju_smile.jpeg":"assets/yaju_smile.jpeg","../assets/yaju_annyoi.png":"assets/yaju_annyoi.png"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -187,7 +147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33755" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45369" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

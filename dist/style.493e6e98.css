@@ -1,2 +1,18 @@
+.image-box > img {
+    width: 27%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.image-box {
+    position: relative;
+}
+
+#annyoi {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.4;
+}
 
 /*# sourceMappingURL=/style.493e6e98.css.map */
