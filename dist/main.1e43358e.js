@@ -130,10 +130,11 @@ window.addEventListener('load', function () {
   var annyoiElement = document.getElementById('annyoi');
   var sliderElement = document.getElementById('slider');
   var DEFAULT_OPACITY = 1;
+  var RANGE_MAX = 10;
   sliderElement.addEventListener('input', function (e) {
-    var rangeValue = parseInt(e.currentTarget.value);
+    var rangeValue = parseInt(e.currentTarget.value, 10);
 
-    if (rangeValue === 10) {
+    if (rangeValue === RANGE_MAX) {
       var audio = new Audio(_yeah.default);
       audio.volume = 0.25;
       audio.play();
