@@ -117,9 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/main.js":[function(require,module,exports) {
+})({"assets/yeah.mp3":[function(require,module,exports) {
+module.exports = "/yeah.5c346cd8.mp3";
+},{}],"src/main.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _yeah = _interopRequireDefault(require("../assets/yeah.mp3"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.addEventListener('load', function () {
+  var annyoiElement = document.getElementById('annyoi');
+  var sliderElement = document.getElementById('slider');
+  var DEFAULT_OPACITY = 1;
+  sliderElement.addEventListener('input', function (e) {
+    var rangeValue = parseInt(e.currentTarget.value);
+
+    if (rangeValue === 10) {
+      var audio = new Audio(_yeah.default);
+      audio.volume = 0.25;
+      audio.play();
+    }
+
+    annyoiElement.style.opacity = DEFAULT_OPACITY - rangeValue / 10;
+  });
+});
+},{"../assets/yeah.mp3":"assets/yeah.mp3"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +170,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45369" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44603" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
